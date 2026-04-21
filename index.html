@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Admin login</div><br/>
+    
+        <form action="/process.php" method="post">
+            <div class="field">
+                <input type="email" name="email">
+                <label>Email</label>
+            </div><br/>
+            <div class="field">
+                <input type="password" name="password">
+                <label>Password</label>
+            </div><br/>
+            <div class="check">
+                <input type="checkbox" id="rem-me">
+                <label for="rem-me">Remember me</label>
+            </div><br/>
+            <div class="pass-link">
+               <a href="#">Forget Password</a>
+            </div><br/>
+            <div class="loginbtn">
+                <input type="submit" value="login" name="Login">
+            </div><br/>
+            
+        </form>
+    </div>  
+        
+</body>
+</html>
