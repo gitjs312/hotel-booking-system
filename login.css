@@ -20,7 +20,7 @@ html, body{
     padding: 30px;
     border-radius: 10px;
     width: 400px;
-   
+    border-color: deepskyblue;
 }
 .field input{
     width: 300px;
