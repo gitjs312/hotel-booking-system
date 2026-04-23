@@ -1,8 +1,8 @@
-
 <?php
     session_start();
-    if(!isset($_SESSION['user'])){
-        header("Location: ./login.php");
+    if(!isset($_SESSION['admin'])){
+        header("Location: ../adminlogin.php");
+        exit();
     }
 ?>
 
@@ -35,42 +35,39 @@
             <li><a href="./index.php" class="nav-link px-2">Travel LK Web Site</a></li>
 
         </ul>
-        <div class="col-md-3 text-end"> <a href="./index.php" type="button" class="btn btn-danger me-2">Log Out</a>
+        <div class="col-md-3 text-end"> <a href="./adminDashBoard.php" type="button" class="btn btn-warning me-2">Back To Dash Board</a>
             
         </div>
     </header>
     <main class="my-5">
-        <h1 class="welcome">Book a Hotel Here...</h1>
+        <h1 class="welcome text-center">ADMIN USER REGISTER</h1>
         <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form action="./process.php" method="POST">
+                    <form action="../process.php" method="POST">
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input readonly type="email" class="form-control" id="email" name="uemail" value="<?php echo $_SESSION['user']; ?>" >
+                            <label for="name" class="form-label">Enter your name</label>
+                            <input type="text" class="form-control" id="name" name="uname" required>
                         </div>
                         <div class="mb-3">
-                            <label for="hotel" >Hotel Name</label>
-                            <select class="form-select" id="hotel" name="hotel">
-                                <option value="" disabled selected>Select a hotel...</option>
-                                <option value="Earls regency">Earls regency</option>
-                                <option value="Cinnamon Grand">Cinnamon Grand</option>
-                                <option value="Hilton">Hilton</option>
-                                <option value="Mount lavinia hotel">Mount lavinia hotel</option>
-                                <option value="Galle face hotel">Galle face hotel</option>
-                                <option value="Queen s hotel">Queen s hotel</option>
-                                
-                            </select>
+                            <label for="email" class="form-label">Enter your Email Address</label>
+                            <input type="email" class="form-control" id="email" name="uemail" required>
                         </div>
                         <div class="mb-3">
-                            <label>Check-in Date</label>
-                            <input type="date" class="form-control" id="checkin" name="startdate" required>
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="upass" required>
                         </div>
                         <div class="mb-3">
-                            <label>Check-out Date</label>
-                            <input type="date" class="form-control" id="checkout" name="enddate" required>
+                            <label for="gender" class="form-label">Enter your Gender</label></br>
+                            <input type="radio"  id="gender" name="ugender" value="male">Male
+                            <input type="radio"  id="gender" name="ugender" value="female">Female
                         </div>
-                        <button type="submit" class="btn btn-primary" name="booking">Book the room</button>
+                        <div class="mb-3">
+                            <label for="text" class="form-label">Enter your City</label>
+                            <input type="text" class="form-control" id="city" name="ucity" required>
+                        </div>
+                        <button type="submit" class="btn btn-success" name="adminUserRegister">Add New User In To System</button>
+                        
                     </form>
                 </div>
             </div>

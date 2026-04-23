@@ -27,8 +27,23 @@
             <li><a href="./index.php" class="nav-link px-2">Travel LK Web Site</a></li>
 
         </ul>
-        <div class="col-md-3 text-end"> <a href="./login.php" type="button" class="btn btn-success me-2">Login</a>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+        
+        <?php
+            session_start();
+            if(!isset($_SESSION['user'])){
+                ?>
+                
+                 <div class="col-md-3 text-end"> <a href="./login.php" type="button" class="btn btn-success me-2">Login</a>
+                 <?php
+            }
+            else{
+                ?>
+                 <div class="col-md-3 text-end"> <a href="./userLogOut.php" type="button" class="btn btn-danger me-2">Log Out</a>
+                <?php
+            }
+            ?>
+            
+            
         </div>
     </header>
     <main class="my-5">
