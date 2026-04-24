@@ -37,7 +37,7 @@
             <li><a href="../index.php" class="nav-link px-2">Travel LK Web Site</a></li>
 
         </ul>
-        <div class="col-md-3 text-end"> <a href="./adminlogin.php" type="button" class="btn btn-warning me-2">Admin Log Out</a>
+        <div class="col-md-3 text-end"> <a href="./logOut.php" type="button" class="btn btn-warning me-2">Admin Log Out</a>
             
         </div>
     </header>
